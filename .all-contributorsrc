@@ -1,0 +1,53 @@
+{
+  "projectName": "ansible.windows",
+  "projectOwner": "sbaerlocher",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "sbaerlocher",
+      "name": "Simon Baerlocher",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4160387?v=4",
+      "profile": "https://sbaerlocher.ch",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "mleutenegger",
+      "name": "Matthias Leutenegger",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1339379?v=4",
+      "profile": "https://github.com/mleutenegger",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "FreeMinded",
+      "name": "Pascal Mages",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1763127?v=4",
+      "profile": "http://www.itigo.ch",
+      "contributions": [
+        "review",
+        "doc"
+      ]
+    },
+    {
+      "login": "ndum",
+      "name": "Nicolas",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18392323?v=4",
+      "profile": "https://github.com/ndum",
+      "contributions": [
+        "review"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
