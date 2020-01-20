@@ -2,7 +2,7 @@
 
 ## Description
 
-Creates various directory structures on the target system.
+Creates a directory structure on the target system.
 
 ## Role Variables
 
