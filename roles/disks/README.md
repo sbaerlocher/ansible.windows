@@ -24,5 +24,5 @@ disks:
   collections:
     - sbaerlocher.windows
   roles:
-    - directories
+    - disks
 ```
