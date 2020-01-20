@@ -16,7 +16,73 @@
     <script>
       new Docute({
         target: '#docute',
-        title: 'Ansible Collection for Windows functions'
+        title: 'Ansible Collection for Windows functions',
+        sourcePath:
+          'https://raw.githubusercontent.com/sbaerlocher/ansible.windows',
+        //  router: { mode: 'history' },
+        nav: [
+          {
+            title: 'Home',
+            link: '/'
+          },
+          {
+            title: 'GitHub',
+            link: 'https://github.com/sbaerlocher/ansible.windows'
+          },
+          {
+            title: 'Ansible Galaxy',
+            link: 'https://galaxy.ansible.com/sbaerlocher/windows'
+          }
+        ],
+        overrides: {
+          '/': {
+            language: 'English' // Used by the language dropdown menu in the sidebar
+          }
+        },
+        // Use `versions` option to add a version selector
+        // In the sidebar
+        versions: {
+          Latest: {
+            link: '/'
+          }
+        },
+        sidebar: [
+          // A sidebar item, with child links
+          {
+            title: 'Roles',
+            children: [
+              {
+                title: 'Directories',
+                link: '/roles/directories'
+              },
+              {
+                title: 'Disks',
+                link: '/roles/disks'
+              },
+              {
+                title: 'Local_Administrators',
+                link: '/roles/local_administrators'
+              },
+              {
+                title: 'Membership',
+                link: '/roles/membership'
+              },
+              {
+                title: 'OneDrive',
+                link: '/roles/onedrive'
+              },
+              {
+                title: 'Remote Desktop',
+                link: '/roles/remote_desktop'
+              }
+            ]
+          }
+        ],
+        footer: `
+      <div style="border-top:1px solid var(--border-color);padding-top:30px;margin: 40px 0;color:#999999;">
+      &copy; ${new Date().getFullYear()} sbaerlocher. Released under MIT license.
+      </div>
+      `
       });
     </script>
   </body>
