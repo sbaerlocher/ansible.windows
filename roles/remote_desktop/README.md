@@ -32,7 +32,7 @@ remote_desktop_port: 3389
 
 ### remote_desktop_shutdown_disable
 
-Disables the function that can be shut down from a remote desktop.
+Disables the the shutdown option from a remote desktop.
 
 ```yml
 remote_desktop_shutdown_disable: false
