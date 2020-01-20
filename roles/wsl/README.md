@@ -2,13 +2,13 @@
 
 ## Description
 
-The role activates the windows wsl feature on a windows device.
+The role activates the Windows Subsystem for Linux (WSL) feature on a windows device.
 
 ## Role Variables
 
-### wsl_enbale
+### wsl_enable
 
-Switches the Windows Subsystem for Linux on or off.
+Switches the WSL on or off.
 
 ```yml
 wsl_enbale: false
