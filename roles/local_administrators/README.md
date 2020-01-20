@@ -2,7 +2,7 @@
 
 ## Description
 
-Ansible role that adds and removes users and groups to the Local Administraotren group.
+Ansible role that adds and removes users and groups to the Local Administrators group.
 
 ## Role Variables
 
@@ -27,7 +27,7 @@ local_administrators_defaults:
 
 ### Pure Option
 
-If the state is enable, only the specified elements exist,
+If the state is enabled, only the specified elements will persist,
 and all other unspecified existing elements are removed.
 
 ```yml
