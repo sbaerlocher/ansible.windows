@@ -1,0 +1,20 @@
+---
+# defaults file for membership
+
+# the DNS name of the domain to which the targeted Windows host should be joined.
+# membership_domain_name: ''
+
+# Username of a domain admin for the target domain (required to join or leave the domain).
+membership_admin_user: ''
+
+# Password for the specified domain_admin_user.
+membership_admin_password: ''
+
+# The desired OU path for adding the computer object. default: omit
+membership_ou: '{{ omit }}'
+
+# Whether the target host should be a member of a domain or workgroup.
+membership_state: 'domain'
+#
+# When state is workgroup, the name of the workgroup that the Windows host should be in.
+# membership_workgroup_name: ''

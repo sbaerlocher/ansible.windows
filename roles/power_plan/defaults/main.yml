@@ -1,0 +1,5 @@
+---
+# defaults file for power_plan
+
+# Here you can specify the Windows Power Plan to be activated.
+power_plan: 'high performance'

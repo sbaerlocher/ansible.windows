@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: Simon Baerlocher (https://sbaerlocher.ch)
+  description: This role will change the power plan of a Windows system to the defined string.
+  license: MIT
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: Windows
+      versions:
+        - 2012R2
+  galaxy_tags:
+    - windows
+    - power
+    - plan
+
+dependencies: []

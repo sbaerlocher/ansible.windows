@@ -1,0 +1,63 @@
+---
+# tasks file for onedrive
+
+- block:
+    - name: Set facts
+      set_fact:
+        onedrive_disable: true
+
+    - name: Check if OneDrive installed x86
+      win_stat:
+        path: C:\\Windows\\System32\\OneDriveSetup.exe
+      register: register_x86_onedrive
+
+    - name: Uninstall OneDrive x86
+      become: true
+      become_user: SYSTEM
+      become_method: runas
+      win_shell: "C:\\Windows\\System32\\OneDriveSetup.exe /uninstall"
+      when: register_x86_onedrive.stat.exists | bool
+
+    - name: Check if OneDrive installed x64
+      win_stat:
+        path: C:\\Windows\\SysWOW64\\OneDriveSetup.exe
+      register: register_x64_onedrive
+
+    - name: Uninstall OneDrive x64
+      become: true
+      become_user: SYSTEM
+      become_method: runas
+      win_shell: "C:\\Windows\\SysWOW64\\OneDriveSetup.exe /uninstall"
+      when: register_x64_onedrive.stat.exists | bool
+
+  when: onedrive_remove
+
+- block:
+    - name: OneDrive Policies
+      win_regedit:
+        path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\OneDrive
+        name: DisableFileSyncNGSC
+        data: "{{ '00000001' if onedrive_disable else '00000000' }}"
+        type: dword
+
+    - name: OneDrive in Explorer
+      win_regedit:
+        path: HKCR:\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}
+        name: System.IsPinnedToNameSpaceTree
+        data: "{{ '00000000' if onedrive_disable else '00000001' }}"
+        type: dword
+
+    - name: OneDrive in Explorer x64
+      win_regedit:
+        path: HKCR:\Wow6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}
+        name: System.IsPinnedToNameSpaceTree
+        data: "{{ '00000000' if onedrive_disable else '00000001' }}"
+        type: dword
+      when: ansible_architecture == "64-Bit"
+
+    - name: OneDrive Start Menu in Default Profile
+      win_file:
+        path: "C:\\Users\\Default\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk"
+        state: absent
+
+  when: onedrive_disable | bool

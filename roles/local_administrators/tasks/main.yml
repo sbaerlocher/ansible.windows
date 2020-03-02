@@ -1,0 +1,31 @@
+---
+# tasks file for local_administrators
+
+- name: add local administrators hosts
+  set_fact:
+    local_administrators_defaults: '{{ var_default | union(var_hosts) }}'
+  when: local_administrators_hosts is defined
+  vars:
+    var_default: '{{ local_administrators_defaults }}'
+    var_hosts: '{{ local_administrators_hosts }}'
+  tags:
+    - configuration
+
+- name: add local administrators group
+  set_fact:
+    local_administrators_defaults: '{{ var_default | union(var_groups) }}'
+  when: local_administrators_groups is defined
+  vars:
+    var_default: '{{ local_administrators_defaults }}'
+    var_groups: '{{ local_administrators_groups }}'
+  tags:
+    - configuration
+
+- name: 'windows : Add to local Administrators'
+  win_group_membership:
+    name: '{{ local_administrators_group }}'
+    members:
+      - '{{ local_administrators_defaults }}'
+    state: "{{ 'pure' if local_administrators_pure_enable else 'present'}}"
+  tags:
+    - configuration

@@ -1,0 +1,21 @@
+---
+# defaults file for local_administrators
+
+# A list of users or groups that Local Administrators
+# should have rights to on the device.
+#
+#   local_administrators_defaults:
+#     - UserX
+#     - GroupX
+#
+local_administrators_defaults: []
+local_administrators_groups: []
+local_administrators_hosts: []
+
+# If the state is enable, only the specified elements exist,
+# and all other unspecified existing elements are removed.
+local_administrators_pure_enable: false
+
+# Name of the local administrators group like e.g.
+# English Administrators or German Administratoren
+local_administrators_group: Administrators

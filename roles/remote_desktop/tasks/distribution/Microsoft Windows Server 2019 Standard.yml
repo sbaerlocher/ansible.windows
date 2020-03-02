@@ -1,0 +1,10 @@
+---
+# tasks file for sbaerlocher.remote-desktop
+
+- name: Add User or Group to Login group for Remote Desktop
+  win_group_membership:
+    name: '{{ remote_desktop_group }}'
+    members: '{{ remote_desktop_members }}'
+    state: present
+  tags:
+    - configuration

@@ -1,0 +1,15 @@
+---
+# defaults file for directories
+
+# With directories you can specify a list of directories
+# with subdirectories to be created on the target system.
+directories:
+  - main: "{{ ansible_env.SystemDrive }}\\{{ directories_main }}"
+    subdirectories:
+      - 'facts.d'
+      - 'xml.d'
+      - 'tools.d'
+      - 'ansible'
+
+# Optional root directory to be created.
+directories_main: Support

@@ -1,0 +1,25 @@
+---
+# defaults file for remote_desktop
+
+# Turns the Remote Desktop Service on or off.
+remote_desktop_enabled: false
+
+# Determines the encryption level of the remote desktop connection.
+# More on: https://getadmx.com/?Category=Windows_10_2016&Policy=Microsoft.Policies.TerminalServer::TS_ENCRYPTION_POLICY
+remote_desktop_minencryptionLevel: '3'
+
+# Determines on which port the Remote Desktop Service should be started.
+remote_desktop_port: 3389
+
+# Disables the function that can be shut down from a remote desktop.
+remote_desktop_shutdown_disable: false
+
+# Determines the security level of the remote desktop connection.
+# More on: https://getadmx.com/?Category=Windows_10_2016&Policy=Microsoft.Policies.TerminalServer::TS_SECURITY_LAYER_POLICY
+remote_desktop_securitylayer: '1'
+
+# Group for logging on to the Remote Desktop Service.
+remote_desktop_group: 'Remotedesktopbenutzer'
+
+# Users or groups who are allowed to log on to the Remote Desktop.
+remote_desktop_members: []

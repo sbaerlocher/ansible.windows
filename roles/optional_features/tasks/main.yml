@@ -1,0 +1,10 @@
+---
+# tasks file for optional-features
+
+- name: 'include optional features'
+  include_tasks: optional_features.yml
+  loop: '{{ optional_features | dict2items }}'
+  loop_control:
+    loop_var: optional_feature
+  tags:
+    - configuration
