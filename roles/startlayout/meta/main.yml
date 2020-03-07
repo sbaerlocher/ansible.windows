@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  role_name: startlayout
+  author: Simon Baerlocher (https://sbaerlocher.ch)
+  description: With this role the default start menu and task bar of a new profile can be defined.
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: Windows
+      versions:
+        - all
+
+  galaxy_tags:
+    - windows
+    - startlayout
+    - taskbarlayout
+
+dependencies: []
