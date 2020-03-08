@@ -1,0 +1,10 @@
+---
+# tasks file for directories
+
+- name: 'include directories'
+  include_tasks: directories.yml
+  loop: '{{ directories }}'
+  loop_control:
+    loop_var: directory
+  tags:
+    - configuration

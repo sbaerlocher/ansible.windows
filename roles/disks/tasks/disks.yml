@@ -1,0 +1,25 @@
+---
+# tasks file for disks
+
+- name: 'abort when the disk {{ disk.disk_number }} not exist'
+  fail:
+    msg: 'Disk does not exist. ( disk_number = {{ disk.disk_number }} )'
+  when: ansible_disks[disk.disk_number] is undefined
+
+- name: 'initialize disk {{ disk.disk_number }}'
+  win_shell: 'Initialize-Disk -Number {{ disk.disk_number }}'
+  when: ansible_disks[disk.disk_number].guid is none
+
+- name: 'create partition {{ disk.drive_letter }}'
+  win_partition:
+    drive_letter: '{{ disk.drive_letter }}'
+    partition_size: -1
+    disk_number: '{{ disk.disk_number }}'
+  when: ansible_disks[disk.disk_number].guid is none
+
+- name: 'format disk {{ disk.drive_letter }}'
+  win_format:
+    drive_letter: '{{ disk.drive_letter }}'
+    file_system: NTFS
+    new_label: '{{ disk.new_label }}'
+  when: ansible_disks[disk.disk_number].guid is none

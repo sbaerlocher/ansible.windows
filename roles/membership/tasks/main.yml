@@ -1,0 +1,19 @@
+---
+# tasks file for membership
+
+- name: 'domain membership'
+  win_domain_membership:
+    dns_domain_name: '{{ membership_domain_name | default(omit) }}'
+    domain_admin_user: '{{ membership_admin_user | default(omit) }}'
+    domain_admin_password: '{{ membership_admin_password | default(omit) }}'
+    domain_ou_path: '{{ membership_ou | default(omit) }}'
+    state: "{{ 'domain' if membership_domain_name is defined else 'workgroup' }}"
+    workgroup_name: '{{ membership_workgroup_name | default(omit) }}'
+  when: membership_domain_name is defined or membership_workgroup_name is defined
+  register: membership_state
+  notify:
+    - Reboot Windows
+    - Wait for connection
+  tags:
+    - configuration
+    - packages

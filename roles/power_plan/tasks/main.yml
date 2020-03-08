@@ -1,0 +1,6 @@
+---
+# tasks file for power-plan
+
+- name: 'Change power plan to {{ power_plan }}'
+  win_power_plan:
+    name: '{{ power_plan }}'

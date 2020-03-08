@@ -1,0 +1,5 @@
+---
+# tasks file for defender
+
+- name: 'Disable or Enable Defender'
+  win_shell: 'Set-MpPreference -DisableRealtimeMonitoring ${{ defender_disable }}'

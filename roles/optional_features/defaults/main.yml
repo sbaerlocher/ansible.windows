@@ -1,0 +1,6 @@
+---
+# defaults file for optional_features
+
+# Here is a list of Windows optional features that can be installed or uninstalled.
+optional_features:
+  - 'Microsoft-Windows-Subsystem-Linux': true

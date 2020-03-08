@@ -1,0 +1,11 @@
+---
+# tasks file for kdcloud.win_disk
+
+- name: 'retrieve disk information'
+  win_disk_facts:
+
+- name: 'include disk'
+  include_tasks: disks.yml
+  loop: '{{ disks }}'
+  loop_control:
+    loop_var: disk

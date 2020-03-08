@@ -1,0 +1,8 @@
+---
+# tasks file for optional-features
+
+- name: 'windows : {{ optional_feature.key }} {{ optional_feature.value }}'
+  win_dsc:
+    resource_name: WindowsOptionalFeature
+    Name: '{{ optional_feature.key }}'
+    Ensure: "{{ 'Enable' if optional_feature.value else 'Disable' }}"

@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  role_name: onedrive
+  author: Simon Baerlocher (https://sbaerlocher.ch)
+  description: Disables or removes Microsoft OneDrive on a Windows 10 device.
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: Windows
+      versions:
+        - all
+
+  galaxy_tags:
+    - windows
+    - onedrive
+
+dependencies: []

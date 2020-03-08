@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Simon Baerlocher (https://sbaerlocher.ch)
+  description: Ansible role that manage Local Administraotren group.
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: Windows
+      versions:
+        - all
+
+  galaxy_tags:
+    - winodws
+    - group
+    - administraotren
+    - user
+
+dependencies: []

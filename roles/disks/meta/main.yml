@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  role_name: disks
+  author: Simon Baerlocher (https://sbaerlocher.ch)
+  description: Initializes, formats and mounts an additional disk on the target system.
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: Windows
+      versions:
+        - all
+
+  galaxy_tags:
+    - windows
+    - disks
+
+dependencies: []

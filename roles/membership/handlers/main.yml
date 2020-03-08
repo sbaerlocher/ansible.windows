@@ -1,0 +1,9 @@
+---
+# handlers file for membership
+
+- name: Reboot Windows
+  win_reboot:
+  when: membership_state.reboot_required
+
+- name: Wait for connection
+  wait_for_connection:

@@ -1,0 +1,17 @@
+---
+# tasks file for directories
+
+- name: 'create {{ directory.main }} directory'
+  win_file:
+    path: '{{ directory.main }}'
+    state: directory
+  tags:
+    - configuration
+
+- name: 'include directories'
+  include_tasks: subdirectories.yml
+  loop: '{{ directory.subdirectories }}'
+  loop_control:
+    loop_var: subdirectories
+  tags:
+    - configuration

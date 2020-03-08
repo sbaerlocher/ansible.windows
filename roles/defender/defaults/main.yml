@@ -1,0 +1,5 @@
+---
+# defaults file for defender
+
+# disables or enables Windows defender on the Windows system.
+defender_disable: true

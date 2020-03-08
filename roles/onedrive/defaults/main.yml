@@ -1,0 +1,8 @@
+---
+# defaults file for onedrive
+
+# Disables OneDrive in the registry
+onedrive_disable: true
+
+# Uninstalls OneDrive on the device.
+onedrive_remove: false

@@ -1,0 +1,8 @@
+---
+# defaults file for disks
+
+# A list of all devices to be included on the target system.
+disks:
+  - disk_number: 1
+    drive_letter: D
+    new_label: Data

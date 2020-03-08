@@ -1,0 +1,9 @@
+---
+# tasks file for directories
+
+- name: 'create {{ directory.main }}\{{ subdirectories }} directory'
+  win_file:
+    path: '{{ directory.main }}\\{{ subdirectories }}'
+    state: directory
+  tags:
+    - configuration
