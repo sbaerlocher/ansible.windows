@@ -5,6 +5,8 @@ and [human-readable changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## master
 
+## 0.0.1
+
 ### Added
 
 - Initial develop
