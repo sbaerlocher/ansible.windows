@@ -1,6 +1,5 @@
 ---
 galaxy_info:
-  role_name: remote_desktop
   author: Simon Baerlocher (https://sbaerlocher.ch)
   description: Enables Windows Remote Desktop Services on Windows.
   license: MIT

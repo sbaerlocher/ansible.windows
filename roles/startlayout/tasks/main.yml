@@ -5,8 +5,6 @@
   win_template:
     src: 'StartLayout.xml.j2'
     dest: "{{ ansible_env.TEMP }}\\StartLayout.xml"
-  register: register_startlayout
 
 - name: 'Import startlayout'
   win_shell: "Import-StartLayout -LayoutPath {{ ansible_env.TEMP }}\\StartLayout.xml -MountPath $env:SystemDrive\\"
-  when: register_startlayout.changed
