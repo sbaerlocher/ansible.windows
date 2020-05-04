@@ -5,12 +5,12 @@
   win_get_url:
     url: '{{ file.url }}'
     dest: '{{ file.path }}\\{{ file.name }}.{{ file.extension }}'
-  when: item.state | default("present") == "present"
+  when: file.state | default("present") == "present"
 
 - name: "Absent {{ file.path }}\\{{ file.name }}.{{ file.extension }}"
   win_file:
     path: "{{ file.path }}\\{{ file.name }}.{{ file.extension }}"
     state: absent
   when:
-    - ("state" in item.keys())
-    - item.state == "absent"
+    - ("state" in file.keys())
+    - file.state == "absent"
