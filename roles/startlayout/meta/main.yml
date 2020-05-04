@@ -1,6 +1,5 @@
 ---
 galaxy_info:
-  role_name: startlayout
   author: Simon Baerlocher (https://sbaerlocher.ch)
   description: With this role the default start menu and task bar of a new profile can be defined.
   license: MIT

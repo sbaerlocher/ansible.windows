@@ -1,6 +1,5 @@
 ---
 galaxy_info:
-  role_name: disks
   author: Simon Baerlocher (https://sbaerlocher.ch)
   description: Initializes, formats and mounts an additional disk on the target system.
   license: MIT
