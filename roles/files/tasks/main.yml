@@ -1,0 +1,22 @@
+---
+# tasks file for files
+
+- name: 'include directories role'
+  include_role:
+    name: directories
+  vars:
+    directories:
+      - main: '{{ file.path }}'
+  loop: '{{ files }}'
+  loop_control:
+    loop_var: file
+  tags:
+    - configuration
+
+- name: 'include file type'
+  include_tasks: '{{ file.type }}.yml'
+  loop: '{{ files }}'
+  loop_control:
+    loop_var: file
+  tags:
+    - configuration
