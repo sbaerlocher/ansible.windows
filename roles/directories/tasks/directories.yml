@@ -13,5 +13,6 @@
   loop: '{{ directory.subdirectories }}'
   loop_control:
     loop_var: subdirectories
+  when: directory.subdirectories is defined
   tags:
     - configuration

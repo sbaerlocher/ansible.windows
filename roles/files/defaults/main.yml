@@ -1,0 +1,25 @@
+---
+# defaults file for files
+
+# List of configuration dictionary defining the content.
+# The following properties are supported:
+#   type     content | url [required]
+#   path                   [required]   Path where the file should be saved.
+#   name                   [required]   File name.
+#   extension              [required]   File extension the one that should have the file.
+#   content                [optional]   List or dictionary of key/value pairs, when content.
+#   url                    [optional]   Url from where the file can be downloaded.
+#
+# Example:
+#
+#   files:
+#     - type: content
+#       path: "c:\\support"
+#       name: 'test'
+#       extension: json
+#       content:
+#         HEALTHCHECK_URL: 'https://healthchecks.itigo.tech'
+#         HEALTCHECKS_CHOCO_API_KEY: hallo
+#
+
+# files:

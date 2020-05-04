@@ -10,6 +10,9 @@ and [human-readable changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - Fixed import lint
+### Added
+
+- Add role files
 
 ## 0.0.1
 
