@@ -1,0 +1,8 @@
+---
+# tasks file for files
+
+- name: "Create {{ file.path }}\\{{ file.name }}.{{ file.extension }}"
+  win_copy:
+    dest: "{{ file.path }}\\{{ file.name }}.{{ file.extension }}"
+    content: '{{ file.content | to_nice_json }}'
+    state: "{{ file.state | default('present') }}"
