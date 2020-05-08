@@ -1,0 +1,10 @@
+---
+# tasks file for scheduled_tasks
+
+- name: 'include scheduled tasks'
+  include_tasks: 'scheduled_task.yml'
+  loop: '{{ scheduled_tasks }}'
+  loop_control:
+    loop_var: scheduled_task
+  tags:
+    - configuration
