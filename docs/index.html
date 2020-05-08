@@ -24,28 +24,28 @@
         nav: [
           {
             title: 'Home',
-            link: '/'
+            link: '/',
           },
           {
             title: 'GitHub',
-            link: 'https://github.com/sbaerlocher/ansible.windows'
+            link: 'https://github.com/sbaerlocher/ansible.windows',
           },
           {
             title: 'Ansible Galaxy',
-            link: 'https://galaxy.ansible.com/sbaerlocher/windows'
-          }
+            link: 'https://galaxy.ansible.com/sbaerlocher/windows',
+          },
         ],
         overrides: {
           '/': {
-            language: 'English' // Used by the language dropdown menu in the sidebar
-          }
+            language: 'English', // Used by the language dropdown menu in the sidebar
+          },
         },
         // Use `versions` option to add a version selector
         // In the sidebar
         versions: {
           Latest: {
-            link: '/'
-          }
+            link: '/',
+          },
         },
         sidebar: [
           // A sidebar item, with child links
@@ -54,52 +54,56 @@
             children: [
               {
                 title: 'Defender',
-                link: '/roles/defender/README'
+                link: '/roles/defender/README',
               },
               {
                 title: 'Directories',
-                link: '/roles/directories/README'
+                link: '/roles/directories/README',
               },
               {
                 title: 'Disks',
-                link: '/roles/disks/README'
+                link: '/roles/disks/README',
               },
               {
                 title: 'Local Administrators',
-                link: '/roles/local_administrators/README'
+                link: '/roles/local_administrators/README',
               },
               {
                 title: 'Membership',
-                link: '/roles/membership/README'
+                link: '/roles/membership/README',
               },
               {
                 title: 'OneDrive',
-                link: '/roles/onedrive/README'
+                link: '/roles/onedrive/README',
               },
               {
                 title: 'Optional Features',
-                link: '/roles/optional_features/README'
+                link: '/roles/optional_features/README',
               },
               {
                 title: 'Power Plan',
-                link: '/roles/power_plan/README'
+                link: '/roles/power_plan/README',
+              },
+              {
+                title: 'Scheduled Tasks',
+                link: '/roles/scheduled_tasks/README',
               },
               {
                 title: 'Remote Desktop',
-                link: '/roles/remote_desktop/README'
+                link: '/roles/remote_desktop/README',
               },
               {
                 title: 'Startlayout',
-                link: '/roles/startlayout/README'
-              }
-            ]
-          }
+                link: '/roles/startlayout/README',
+              },
+            ],
+          },
         ],
         footer: `
       <div style="border-top:1px solid var(--border-color);padding-top:30px;margin: 40px 0;color:#999999;">
       &copy; ${new Date().getFullYear()} sbaerlocher. Released under MIT license.
       </div>
-      `
+      `,
       });
     </script>
   </body>
