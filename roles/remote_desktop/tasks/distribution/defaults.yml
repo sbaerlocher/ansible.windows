@@ -1,6 +1,0 @@
----
-# tasks file for sbaerlocher.remote-desktop
-
-- name: Message
-  debug:
-    msg: 'Your {{ ansible_system }} is not supported'
