@@ -1,13 +1,14 @@
 ---
 namespace: 'sbaerlocher'
 name: 'windows'
-version: 0.0.5
+version: 0.0.6
 readme: README.md
 authors:
   - 'Simon Baerlocher (https://sbaerlocher.ch)'
 description: 'Ansible Collection for Windows functions.'
 license:
   - MIT
+license_file: 'LICENSE'
 tags:
   - windows
 dependencies: {}
