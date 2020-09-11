@@ -8,7 +8,6 @@ authors:
 description: 'Ansible Collection for Windows functions.'
 license:
   - MIT
-license_file: 'LICENSE'
 tags:
   - windows
 dependencies: {}
