@@ -5,6 +5,16 @@ and [human-readable changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## master
 
+## 0.0.7
+
+### Added
+
+- Add module win_policyfile
+
+### Changed
+
+- Change to the module win_policyfile in the Role remote_desktop
+
 ## 0.0.6
 
 ### Added
