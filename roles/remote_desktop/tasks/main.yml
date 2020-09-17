@@ -69,6 +69,7 @@
     name: '{{ remote_desktop_group }}'
     members: '{{ remote_desktop_members }}'
     state: present
+  when: remote_desktop_members is defined and remote_desktop_members | length > 0
 
 # https://www.winfaq.de/faq_html/Content/tip1000/onlinefaq.php?h=tip1368.htm
 - name: Disable Shutdown Butten from Windows Start
