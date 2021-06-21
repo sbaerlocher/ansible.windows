@@ -1,5 +1,8 @@
 ---
 # tasks file for defender
 
-- name: 'Disable or Enable Defender'
-  win_shell: 'Set-MpPreference -DisableRealtimeMonitoring ${{ defender_disable }}'
+- name: 'Exclude from Scanning'
+  win_defender_exclusion:
+    list: '{{ item.value }}'
+    type: '{{ item.key }}'
+  with_dict: '{{ defender_exclusion }}'

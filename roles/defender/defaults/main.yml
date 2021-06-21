@@ -3,3 +3,6 @@
 
 # disables or enables Windows defender on the Windows system.
 defender_disable: true
+# example
+# defender_exclusion:
+#  - path:
