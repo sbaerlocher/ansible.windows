@@ -1,6 +1,10 @@
 ---
 # tasks file for defender
 
+- name: 'Disable or Enable Defender'
+  win_shell: 'Set-MpPreference -DisableRealtimeMonitoring ${{ defender_disable }}'
+  when: ansible_distribution_major_version is version('6', '>')
+
 - name: 'Exclude from Scanning'
   win_defender_exclusion:
     list: '{{ item.value }}'
