@@ -5,6 +5,12 @@ and [human-readable changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## master
 
+## 0.0.8
+
+### Added
+
+- Add module win_defender_exclusion
+
 ## 0.0.7
 
 ### Added
