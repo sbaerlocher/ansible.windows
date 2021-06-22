@@ -5,6 +5,12 @@ and [human-readable changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## master
 
+## 0.0.9
+
+### Fixed
+
+- Fixed module defender_exclusion
+
 ## 0.0.8
 
 ### Added
